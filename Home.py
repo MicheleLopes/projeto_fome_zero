@@ -175,7 +175,7 @@ with st.container():
         col2.metric( 'Países cadastrados', paises ) 
     with col3:
         cidades = len(df1['city'].unique())
-        col3.metric( 'cidades cadastradas', cidades ) 
+        col3.metric( 'Cidades cadastradas', cidades ) 
 with st.container():
     col1, col2 = st.columns(2)
     with col1:
