@@ -201,18 +201,18 @@ with st.container():
     col1, col2 = st.columns(2)
     with col1:
         st.markdown('##### Top 2 Melhores')
-        col1, col12 = st.columns(2)
-        with col1:
-            top_cuisines(df1, index=0, col_name=col1, asc=False)         
-        with col12:
-            top_cuisines(df1, index=1, col_name=col12, asc=False)      
     with col2:
         st.markdown('##### Top 2 Piores')
-        col1, col2 = st.columns(2)
+with st.container():
+        col1, col2, col3, col4 = st.columns(4)
         with col1:
-            top_cuisines(df1, index=0, col_name=col1, asc=True)
+            top_cuisines(df1, index=0, col_name=col1, asc=False)         
         with col2:
-            top_cuisines(df1, index=1, col_name=col2, asc=True)
+            top_cuisines(df1, index=1, col_name=col2, asc=False)      
+        with col3:
+            top_cuisines(df1, index=0, col_name=col3, asc=True)
+        with col4:
+            top_cuisines(df1, index=1, col_name=col4, asc=True)
 with st.container():
     st.markdown(f'#### Top {qt_restaurante} restaurantes')
     df_limitado = melhores_restaurantes(df1)
