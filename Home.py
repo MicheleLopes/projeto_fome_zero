@@ -172,7 +172,7 @@ with st.container():
         col1.metric( 'Restaurantes cadastrados', rest ) 
     with col2:
         paises = len(df1['country_code'].unique())
-        col2.metric( 'Restaurantes cadastrados', paises ) 
+        col2.metric( 'Países cadastrados', paises ) 
     with col3:
         cidades = len(df1['city'].unique())
         col3.metric( 'cidades cadastradas', cidades ) 
